@@ -1,7 +1,7 @@
 # PakEconomyDashboard (Pakistan Economy Dashboard)
 
 ## Overview
-This dashboard provides key insights into the economic indicators of Pakistan, offering interactive visualizations and real-time data on GDP, inflation, exchange rates, and stock market trends. The project is currently a work in progress with additional sections under development.
+This dashboard provides key insights into the economic indicators of Pakistan, offering interactive visualizations and real-time data on GDP, inflation, exchange rates, and stock market trends. The project is currently a work in progress with additional sections under development. The data folder contains some files that I have yet to use in the main dashboard, and a sub-folder named 'Dealt with' which contains datasets I have integrated into the dashboard. The notebook contains a record of the preprocessing done on the files.
 
 ## Features
 - **Home Page**: Overview of the dashboard and key economic highlights.
