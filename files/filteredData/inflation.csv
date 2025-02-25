@@ -1,0 +1,317 @@
+,RegionalMember,Year,Inflation,Country Code
+0,Armenia,2018,2.5,ARM
+1,Armenia,2019,1.4,ARM
+2,Armenia,2020,1.2,ARM
+3,Armenia,2021,7.2,ARM
+4,Armenia,2022,8.6,ARM
+5,Armenia,2023,7.0,ARM
+6,Armenia,2024,6.2,ARM
+7,Azerbaijan,2018,2.4,AZE
+8,Azerbaijan,2019,2.7,AZE
+9,Azerbaijan,2020,2.8,AZE
+10,Azerbaijan,2021,6.7,AZE
+11,Azerbaijan,2022,13.9,AZE
+12,Azerbaijan,2023,7.0,AZE
+13,Azerbaijan,2024,6.5,AZE
+14,Georgia,2018,2.6,GEO
+15,Georgia,2019,4.9,GEO
+16,Georgia,2020,5.2,GEO
+17,Georgia,2021,9.6,GEO
+18,Georgia,2022,11.9,GEO
+19,Georgia,2023,6.0,GEO
+20,Georgia,2024,4.0,GEO
+21,Kazakhstan,2018,6.0,KAZ
+22,Kazakhstan,2019,5.3,KAZ
+23,Kazakhstan,2020,6.8,KAZ
+24,Kazakhstan,2021,8.0,KAZ
+25,Kazakhstan,2022,15.0,KAZ
+26,Kazakhstan,2023,11.8,KAZ
+27,Kazakhstan,2024,6.4,KAZ
+28,Kyrgyz Republic,2018,1.5,KGZ
+29,Kyrgyz Republic,2019,1.1,KGZ
+30,Kyrgyz Republic,2020,6.3,KGZ
+31,Kyrgyz Republic,2021,11.9,KGZ
+32,Kyrgyz Republic,2022,13.9,KGZ
+33,Kyrgyz Republic,2023,12.0,KGZ
+34,Kyrgyz Republic,2024,8.6,KGZ
+35,Tajikistan,2018,5.4,TJK
+36,Tajikistan,2019,8.0,TJK
+37,Tajikistan,2020,9.4,TJK
+38,Tajikistan,2021,8.0,TJK
+39,Tajikistan,2022,4.2,TJK
+40,Tajikistan,2023,7.0,TJK
+41,Tajikistan,2024,6.5,TJK
+42,Turkmenistan,2018,13.2,TKM
+43,Turkmenistan,2019,13.0,TKM
+44,Turkmenistan,2020,10.0,TKM
+45,Turkmenistan,2021,12.5,TKM
+46,Turkmenistan,2022,10.0,TKM
+47,Turkmenistan,2023,10.0,TKM
+48,Turkmenistan,2024,10.0,TKM
+49,Uzbekistan,2018,17.5,UZB
+50,Uzbekistan,2019,14.6,UZB
+51,Uzbekistan,2020,12.9,UZB
+52,Uzbekistan,2021,10.7,UZB
+53,Uzbekistan,2022,11.4,UZB
+54,Uzbekistan,2023,11.0,UZB
+55,Uzbekistan,2024,10.0,UZB
+56,"Hong Kong, China",2018,2.4,HKG
+57,"Hong Kong, China",2019,2.9,HKG
+58,"Hong Kong, China",2020,0.3,HKG
+59,"Hong Kong, China",2021,1.6,HKG
+60,"Hong Kong, China",2022,1.9,HKG
+61,"Hong Kong, China",2023,2.3,HKG
+62,"Hong Kong, China",2024,2.1,HKG
+63,Mongolia,2018,6.8,MNG
+64,Mongolia,2019,7.3,MNG
+65,Mongolia,2020,3.7,MNG
+66,Mongolia,2021,7.3,MNG
+67,Mongolia,2022,15.2,MNG
+68,Mongolia,2023,10.9,MNG
+69,Mongolia,2024,8.7,MNG
+70,People's Republic of China,2018,2.1,CHN
+71,People's Republic of China,2019,2.9,CHN
+72,People's Republic of China,2020,2.5,CHN
+73,People's Republic of China,2021,0.9,CHN
+74,People's Republic of China,2022,2.0,CHN
+75,People's Republic of China,2023,2.2,CHN
+76,People's Republic of China,2024,2.0,CHN
+77,Republic of Korea,2018,1.5,KOR
+78,Republic of Korea,2019,0.4,KOR
+79,Republic of Korea,2020,0.5,KOR
+80,Republic of Korea,2021,2.5,KOR
+81,Republic of Korea,2022,5.1,KOR
+82,Republic of Korea,2023,3.2,KOR
+83,Republic of Korea,2024,2.0,KOR
+84,"Taipei,China",2018,1.4,TWN
+85,"Taipei,China",2019,0.6,TWN
+86,"Taipei,China",2020,-0.2,TWN
+87,"Taipei,China",2021,2.0,TWN
+88,"Taipei,China",2022,2.9,TWN
+89,"Taipei,China",2023,2.0,TWN
+90,"Taipei,China",2024,2.0,TWN
+91,Afghanistan,2018,0.6,AFG
+92,Afghanistan,2019,2.3,AFG
+93,Afghanistan,2020,5.6,AFG
+94,Afghanistan,2021,5.2,AFG
+95,Afghanistan,2022,13.8,AFG
+96,Bangladesh,2018,5.8,BGD
+97,Bangladesh,2019,5.5,BGD
+98,Bangladesh,2020,5.7,BGD
+99,Bangladesh,2021,5.6,BGD
+100,Bangladesh,2022,6.2,BGD
+101,Bangladesh,2023,8.7,BGD
+102,Bangladesh,2024,6.6,BGD
+103,Bhutan,2018,2.6,BTN
+104,Bhutan,2019,2.8,BTN
+105,Bhutan,2020,5.6,BTN
+106,Bhutan,2021,7.3,BTN
+107,Bhutan,2022,5.6,BTN
+108,Bhutan,2023,5.5,BTN
+109,Bhutan,2024,5.1,BTN
+110,India,2018,3.4,IND
+111,India,2019,4.8,IND
+112,India,2020,6.2,IND
+113,India,2021,5.5,IND
+114,India,2022,6.7,IND
+115,India,2023,5.0,IND
+116,India,2024,4.5,IND
+117,Maldives,2018,-0.1,MDV
+118,Maldives,2019,0.2,MDV
+119,Maldives,2020,-1.4,MDV
+120,Maldives,2021,0.5,MDV
+121,Maldives,2022,2.3,MDV
+122,Maldives,2023,4.5,MDV
+123,Maldives,2024,2.0,MDV
+124,Nepal,2018,4.2,NPL
+125,Nepal,2019,4.6,NPL
+126,Nepal,2020,6.2,NPL
+127,Nepal,2021,3.6,NPL
+128,Nepal,2022,6.3,NPL
+129,Nepal,2023,7.4,NPL
+130,Nepal,2024,6.2,NPL
+131,Pakistan,2018,4.7,PAK
+132,Pakistan,2019,6.8,PAK
+133,Pakistan,2020,10.7,PAK
+134,Pakistan,2021,8.9,PAK
+135,Pakistan,2022,12.2,PAK
+136,Pakistan,2023,27.5,PAK
+137,Pakistan,2024,15.0,PAK
+138,Sri Lanka,2018,4.3,LKA
+139,Sri Lanka,2019,4.3,LKA
+140,Sri Lanka,2020,4.6,LKA
+141,Sri Lanka,2021,6.0,LKA
+142,Sri Lanka,2022,46.4,LKA
+143,Sri Lanka,2023,24.6,LKA
+144,Sri Lanka,2024,5.5,LKA
+145,Brunei Darussalam,2018,1.0,BRN
+146,Brunei Darussalam,2019,-0.4,BRN
+147,Brunei Darussalam,2020,1.9,BRN
+148,Brunei Darussalam,2021,1.7,BRN
+149,Brunei Darussalam,2022,3.7,BRN
+150,Brunei Darussalam,2023,2.0,BRN
+151,Brunei Darussalam,2024,1.6,BRN
+152,Cambodia,2018,2.5,KHM
+153,Cambodia,2019,1.9,KHM
+154,Cambodia,2020,2.9,KHM
+155,Cambodia,2021,2.9,KHM
+156,Cambodia,2022,5.3,KHM
+157,Cambodia,2023,3.0,KHM
+158,Cambodia,2024,4.0,KHM
+159,Indonesia,2018,3.3,IDN
+160,Indonesia,2019,2.8,IDN
+161,Indonesia,2020,3.8,IDN
+162,Indonesia,2021,1.6,IDN
+163,Indonesia,2022,4.2,IDN
+164,Indonesia,2023,4.2,IDN
+165,Indonesia,2024,3.0,IDN
+166,Lao People’s Dem. Rep.,2018,2.0,LAO
+167,Lao People’s Dem. Rep.,2019,3.3,LAO
+168,Lao People’s Dem. Rep.,2020,5.1,LAO
+169,Lao People’s Dem. Rep.,2021,3.8,LAO
+170,Lao People’s Dem. Rep.,2022,23.0,LAO
+171,Lao People’s Dem. Rep.,2023,16.0,LAO
+172,Lao People’s Dem. Rep.,2024,5.0,LAO
+173,Malaysia,2018,1.0,MYS
+174,Malaysia,2019,0.7,MYS
+175,Malaysia,2020,-1.1,MYS
+176,Malaysia,2021,2.5,MYS
+177,Malaysia,2022,3.4,MYS
+178,Malaysia,2023,3.1,MYS
+179,Malaysia,2024,2.8,MYS
+180,Myanmar,2018,5.9,MMR
+181,Myanmar,2019,8.6,MMR
+182,Myanmar,2020,5.7,MMR
+183,Myanmar,2021,3.6,MMR
+184,Myanmar,2022,16.0,MMR
+185,Myanmar,2023,10.5,MMR
+186,Myanmar,2024,8.2,MMR
+187,Philippines,2018,5.2,PHL
+188,Philippines,2019,2.4,PHL
+189,Philippines,2020,2.4,PHL
+190,Philippines,2021,3.9,PHL
+191,Philippines,2022,5.8,PHL
+192,Philippines,2023,6.2,PHL
+193,Philippines,2024,4.0,PHL
+194,Singapore,2018,0.4,SGP
+195,Singapore,2019,0.6,SGP
+196,Singapore,2020,-0.2,SGP
+197,Singapore,2021,2.3,SGP
+198,Singapore,2022,6.1,SGP
+199,Singapore,2023,5.0,SGP
+200,Singapore,2024,2.0,SGP
+201,Thailand,2018,1.1,THA
+202,Thailand,2019,0.7,THA
+203,Thailand,2020,-0.8,THA
+204,Thailand,2021,1.2,THA
+205,Thailand,2022,6.1,THA
+206,Thailand,2023,2.9,THA
+207,Thailand,2024,2.3,THA
+208,Timor-Leste,2018,2.4,TLS
+209,Timor-Leste,2019,1.0,TLS
+210,Timor-Leste,2020,0.5,TLS
+211,Timor-Leste,2021,3.8,TLS
+212,Timor-Leste,2022,7.0,TLS
+213,Timor-Leste,2023,5.5,TLS
+214,Timor-Leste,2024,2.8,TLS
+215,Viet Nam,2018,3.5,VNM
+216,Viet Nam,2019,2.8,VNM
+217,Viet Nam,2020,3.2,VNM
+218,Viet Nam,2021,1.8,VNM
+219,Viet Nam,2022,3.2,VNM
+220,Viet Nam,2023,4.5,VNM
+221,Viet Nam,2024,4.2,VNM
+222,Cook Islands,2018,0.1,COO
+223,Cook Islands,2019,0.0,COO
+224,Cook Islands,2020,0.7,COO
+225,Cook Islands,2021,1.8,COO
+226,Cook Islands,2022,4.2,COO
+227,Cook Islands,2023,7.7,COO
+228,Cook Islands,2024,2.3,COO
+229,Federated States of Micronesia,2018,1.1,FSM
+230,Federated States of Micronesia,2019,2.2,FSM
+231,Federated States of Micronesia,2020,1.0,FSM
+232,Federated States of Micronesia,2021,1.8,FSM
+233,Federated States of Micronesia,2022,5.0,FSM
+234,Federated States of Micronesia,2023,3.6,FSM
+235,Federated States of Micronesia,2024,0.4,FSM
+236,Fiji,2018,4.1,FJI
+237,Fiji,2019,1.8,FJI
+238,Fiji,2020,-2.6,FJI
+239,Fiji,2021,0.2,FJI
+240,Fiji,2022,4.3,FJI
+241,Fiji,2023,4.2,FJI
+242,Fiji,2024,3.5,FJI
+243,Kiribati,2018,0.6,KIR
+244,Kiribati,2019,-1.8,KIR
+245,Kiribati,2020,2.3,KIR
+246,Kiribati,2021,1.0,KIR
+247,Kiribati,2022,5.0,KIR
+248,Kiribati,2023,3.7,KIR
+249,Kiribati,2024,3.0,KIR
+250,Marshall Islands,2018,0.8,MHL
+251,Marshall Islands,2019,-0.1,MHL
+252,Marshall Islands,2020,-0.7,MHL
+253,Marshall Islands,2021,2.2,MHL
+254,Marshall Islands,2022,3.3,MHL
+255,Marshall Islands,2023,3.7,MHL
+256,Marshall Islands,2024,3.5,MHL
+257,Nauru,2018,0.5,NRU
+258,Nauru,2019,4.3,NRU
+259,Nauru,2020,-6.6,NRU
+260,Nauru,2021,1.2,NRU
+261,Nauru,2022,2.3,NRU
+262,Nauru,2023,2.5,NRU
+263,Nauru,2024,1.9,NRU
+264,Niue,2018,9.6,NIU
+265,Niue,2019,2.4,NIU
+266,Niue,2020,2.3,NIU
+267,Palau,2018,2.0,PLW
+268,Palau,2019,0.6,PLW
+269,Palau,2020,0.7,PLW
+270,Palau,2021,0.5,PLW
+271,Palau,2022,10.2,PLW
+272,Palau,2023,5.0,PLW
+273,Palau,2024,5.5,PLW
+274,Papua New Guinea,2018,4.7,PNG
+275,Papua New Guinea,2019,3.6,PNG
+276,Papua New Guinea,2020,4.9,PNG
+277,Papua New Guinea,2021,4.5,PNG
+278,Papua New Guinea,2022,6.0,PNG
+279,Papua New Guinea,2023,5.0,PNG
+280,Papua New Guinea,2024,5.0,PNG
+281,Samoa,2018,3.7,WSM
+282,Samoa,2019,2.2,WSM
+283,Samoa,2020,1.5,WSM
+284,Samoa,2021,-3.0,WSM
+285,Samoa,2022,8.8,WSM
+286,Samoa,2023,10.2,WSM
+287,Samoa,2024,2.0,WSM
+288,Solomon Islands,2018,3.5,SLB
+289,Solomon Islands,2019,1.6,SLB
+290,Solomon Islands,2020,3.0,SLB
+291,Solomon Islands,2021,-0.2,SLB
+292,Solomon Islands,2022,5.5,SLB
+293,Solomon Islands,2023,4.5,SLB
+294,Solomon Islands,2024,3.7,SLB
+295,Tonga,2018,-3.9,TON
+296,Tonga,2019,4.0,TON
+297,Tonga,2020,0.2,TON
+298,Tonga,2021,1.4,TON
+299,Tonga,2022,8.5,TON
+300,Tonga,2023,9.4,TON
+301,Tonga,2024,1.5,TON
+302,Tuvalu,2018,2.2,TUV
+303,Tuvalu,2019,3.5,TUV
+304,Tuvalu,2020,1.6,TUV
+305,Tuvalu,2021,6.7,TUV
+306,Tuvalu,2022,7.6,TUV
+307,Tuvalu,2023,3.3,TUV
+308,Tuvalu,2024,2.8,TUV
+309,Vanuatu,2018,2.3,VUT
+310,Vanuatu,2019,2.8,VUT
+311,Vanuatu,2020,5.3,VUT
+312,Vanuatu,2021,2.3,VUT
+313,Vanuatu,2022,4.8,VUT
+314,Vanuatu,2023,4.0,VUT
+315,Vanuatu,2024,3.0,VUT
