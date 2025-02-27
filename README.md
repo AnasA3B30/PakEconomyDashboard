@@ -9,9 +9,9 @@ This dashboard provides key insights into the economic indicators of Pakistan, o
 - **Inflation Page**: Tracks inflation rates, consumer price index (CPI), and trends over time.
 - **Exchange Rates Page**: Presents historical and current exchange rates of PKR against major currencies.
 - **Stocks Page**: Work in progress, includes some initial data on Pakistan Stock Exchange trends.
+- - **Imports & Exports**: Data on trade balances, major imports and exports.
 
 ## Upcoming Features
-- **Imports & Exports**: Data on trade balances, major imports and exports.
 - **Employment**: Insights into labor market trends, employment rates, and sector-wise employment distribution.
 - **Final Report**: A comprehensive summary of Pakistan’s economic performance based on the collected data.
 - **Monthly Budgetary Position**: Updates on government revenue, expenditure, and fiscal deficit.
