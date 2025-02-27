@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import  plotly.express as px
 import plotly.graph_objects as go
-from matplotlib.pyplot import title
+
 
 gdp_data = pd.read_csv(r'files/filteredData/Pakistan GDP.csv')
 gdp_years = list(gdp_data['Year'])
@@ -39,7 +39,7 @@ def show():
         # creating charts
         # line plot
         line_plot = px.line(relevant_data, x='Year', y='GDP')
-        line_plot.update_layout(
+        line_plot.update_layout(height=700,
             xaxis=dict(
                 tickmode='array',
                 tickvals=list(range(start, end + 1))
@@ -48,7 +48,7 @@ def show():
         # bar plot
         bar_plot = px.bar(relevant_data, x='Year', y='GDP',color='GDP')
         bar_plot.update_traces(showlegend=False, )
-        bar_plot.update_layout(
+        bar_plot.update_layout(height=700,
             showlegend=False,
             xaxis=dict(
                 tickmode='array',
@@ -64,25 +64,17 @@ def show():
             st.plotly_chart(bar_plot)
 
         else:
-            bar_plot = px.bar(relevant_data, x='Year', y='GDP', labels={'GDP': ''},color='GDP')
-            bar_plot.update_traces(showlegend=False, )
-            bar_plot.update_layout(
-                showlegend=False,
-                xaxis=dict(
-                    tickmode='array',
-                    tickvals=[str(i) for i in range(start,end+1)]
-                )
-            )
+
 
             col1, col2 = st.columns(2)
             col1.plotly_chart(line_plot)
             col2.plotly_chart(bar_plot)
 
         col1, col2, col3, col4 = st.columns(4)
-        col2.metric("GDP Growth in USD", metric1)
-        col1.metric("GDP Growth", metric2)
-        col3.metric("GDP Growth %", metric3)
-        col4.metric('Avg Yearly Growth', metric4)
+        col2.metric("GDP Growth in USD", metric1, f'from {start} to {end}')
+        col1.metric("GDP Growth", metric2,f'from {start} to {end}')
+        col3.metric("GDP Growth %", metric3, f'from {start} to {end}')
+        col4.metric('Avg Yearly Growth', metric4, f'from {start} to {end}')
 
     elif select=='Sector Wise GDP Report':
         st.subheader('Reports by sector')

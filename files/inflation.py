@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
-from rich.diagnose import report
+
 
 inflation_data = pd.read_csv(r'files/filteredData/inflation.csv')
 
@@ -12,7 +12,7 @@ def show():
     mode = st.sidebar.radio('Choose a plot type', options=['Line plot', 'Bar plot'],)
     if mode == 'Line plot':
         st.header('Inflation Rates Trends')
-        start, end = st.slider('Select a year range', min_value=2018, max_value=2024, value=(2018, 2019))
+        start, end = st.slider('Select a year range', min_value=2018, max_value=2024, value=(2018, 2021))
         filtered_data = inflation_data[(inflation_data['Year'] >= start) & (inflation_data['Year'] <= end)]
         countries = st.sidebar.multiselect('Select countries', options=inflation_data.RegionalMember.unique(),
                                    default='Pakistan')

@@ -36,21 +36,21 @@ metric_diff_covid = str(formatted_diff_covid) + ' USD from 2020'
 
 def show():
 
-    st.header('Economy Report of Pakistan')
-    st.markdown('<p style="font-size: 20px;">Here is a brief summary of current, pandemic and immediate post-pandemic economic situation of Pakistan.</p>', unsafe_allow_html=True)
+    st.title(':bar_chart: Economy Report of Pakistan')
+    st.divider()
     main1, main2, main3, main4 = st.columns(4)
     with main1:
         st.markdown("""
-            <div style="padding:10px; border-radius:10px; background-color:#f8f9fa; 
+            <div style="padding:15px; border-radius:10px; background-color:#f8f9fa; 
                         box-shadow: 2px 2px 10px #ddd; text-align: center;">
                 <h3 style="color:#333;">24th Largest Economy</h3>
-                <p style="color:#333;">Based on PPP</p>
+                <p style="color:#333;">Based on Purchasing Power Parity</p>
             </div>
             """, unsafe_allow_html=True)
 
     with main2:
         st.markdown("""
-            <div style="padding:10px; border-radius:10px; background-color:#f8f9fa; 
+            <div style="padding:15px; border-radius:10px; background-color:#f8f9fa; 
                         box-shadow: 2px 2px 10px #ddd; text-align: center;">
                 <h3 style="color:#333;">43rd Largest Economy</h3>
                 <p style="color:#333;">Based on Nominal GDP</p>
@@ -59,7 +59,7 @@ def show():
 
     with main3:
         st.markdown("""
-            <div style="padding:10px; border-radius:10px; background-color:#f8f9fa; 
+            <div style="padding:15px; border-radius:10px; background-color:#f8f9fa; 
                         box-shadow: 2px 2px 10px #ddd; text-align: center;">
                 <h3 style="color:#333;">161st Ranked Economy</h3>
                 <p style="color:#333;">By Nominal GDP per Capita</p>
@@ -69,17 +69,17 @@ def show():
     with main4:
         with st.container():
             st.markdown("""
-                <div style="padding:10px; border-radius:10px; background-color:#f8f9fa; 
+                <div style="padding:15px; border-radius:10px; background-color:#f8f9fa; 
                             box-shadow: 2px 2px 10px #ddd; text-align: center;">
                     <h3 style="color:#333;">138th Ranked Economy</h3>
-                    <p style="color:#333;">By GDP PPP</p>
+                    <p style="color:#333;">By GDP Purchasing Power Parity</p>
                 </div>
                 """, unsafe_allow_html=True)
 
     st.divider()
 
     #WRT to 2023
-    st.subheader('Post-COVID Overview')
+    st.subheader('Post-COVID Overview 🌐')
     col1,col2,col3,col4 = st.columns(4)
     col2.metric('GDP 2024', metric2_val, metric2_diff)
     col1.metric('GDP 2023', formatted_2023+' USD')
@@ -88,7 +88,7 @@ def show():
     st.divider()
 
     #WRT Covid Years
-    st.subheader('During COVID Overview (2020 as reference)')
+    st.subheader('During COVID Overview 🦠 (2020 as reference)')
     col5, col6, col7, col8 = st.columns(4)
     col6.metric('GDP 2024', metric_val_covid, metric_diff_covid)
     col5.metric('GDP COVID', formatted_covid + ' USD')

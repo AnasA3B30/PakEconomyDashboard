@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
-import plotly.express as px
+
 
 exchange_file = pd.read_csv(r'files/filteredData/exchange_Rates.csv')
 exchange_file = exchange_file.drop(columns='Unnamed: 0')
