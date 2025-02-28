@@ -30,6 +30,7 @@ def show():
     stock_selection = st.sidebar.selectbox('Choose one:', options=['KSE 100 Index', 'Other Stocks'])
     chart_selection = st.sidebar.radio('Select a view: ', options=['Line plot', 'Bar chart', 'Both'])
     if stock_selection=='KSE 100 Index':
+        st.title('KSE 100 Stock Index')
         color_map = {'Open': '#A2C5E8', 'High': '#1B3B6F', 'Low': '#427AA1', 'Close': '#26547C', 'Volume': '#6497C8'}
         mode = st.selectbox('Choose trend view:', options=['General Trends','Yearly View'])
         if mode=='General Trends':
@@ -43,7 +44,7 @@ def show():
                 bar_kse.add_trace(go.Bar(x=data['Year'],y=data[metric],name=metric,marker=dict(color=color_map.get(metric, 'gray'))))
                 line_kse.add_trace(go.Scatter(x=data['Year'], y=data[metric], mode='lines+markers', name=metric, line=dict(color=color_map.get(metric, 'gray'), width=2)))
             bar_kse.update_layout(
-                height=700,
+
                 xaxis=dict(
                 tickmode='array',
                 tickvals=data['Year'],  # Ensures correct year labeling
@@ -51,7 +52,7 @@ def show():
                 )
             )
             line_kse.update_layout(
-                height=700,
+
                 xaxis=dict(
                     tickmode='array',
                     tickvals=data['Year'],  # Ensures correct year labeling
@@ -65,8 +66,7 @@ def show():
 
                 st.plotly_chart(bar_kse)
             elif chart_selection=='Both':
-                line_kse.update_layout(height=600)
-                bar_kse.update_layout(height=600)
+
                 col1, col2 = st.columns(2)
                 with col1:
                     st.plotly_chart(line_kse)
@@ -102,7 +102,7 @@ def show():
                 line_kse.add_trace(go.Scatter(x=df['Month'], y=df[metric], mode='lines+markers', name=metric,line=dict(color=color_map.get(metric, 'gray'), width=2) ))
 
             bar_kse.update_layout(
-                height=700,
+
                 xaxis=dict(
                     title="Month",
                     tickmode="array",
@@ -112,7 +112,7 @@ def show():
                 )
             )
             line_kse.update_layout(
-                height=700,
+
                 xaxis=dict(
                     title="Month",
                     tickmode="array",
@@ -123,14 +123,13 @@ def show():
             )
 
             if chart_selection == 'Line plot':
-                line_kse.update_layout(height=700)
+
                 st.plotly_chart(line_kse)
             elif chart_selection == 'Bar chart':
-                bar_kse.update_layout(height=700)
+
                 st.plotly_chart(bar_kse)
             elif chart_selection == 'Both':
-                line_kse.update_layout(height=600)
-                bar_kse.update_layout(height=600)
+
                 col1, col2 = st.columns(2)
                 with col1:
                     st.plotly_chart(line_kse)
@@ -138,6 +137,7 @@ def show():
                     st.plotly_chart(bar_kse)
 
     elif stock_selection == 'Other Stocks':
+        st.title('Company Stocks')
         start, end = st.slider('Select a year range:', min_value=2000, max_value=2021, value=(2008, 2019))
         companies_selection = st.multiselect('Select the companies you want to analyze:', options=companies_names, default=['Allied Bank', 'NBP Bank', 'JS Bank',])
         line_companies = go.Figure()
@@ -151,12 +151,7 @@ def show():
             for metric in metrics:
                 line_companies.add_trace(go.Scatter(x=data['Year'], y=data[metric], mode='lines', name=f'{name} {metric}'))
                 bar_companies.add_trace(go.Bar(x=data['Year'], y=data[metric], name=f'{name} {metric}'))
-            line_companies.update_layout(
-                height=700
-            )
-            bar_companies.update_layout(
-                height=700
-            )
+
         if chart_selection=='Line plot':
             st.plotly_chart(line_companies)
         elif chart_selection == 'Bar chart':

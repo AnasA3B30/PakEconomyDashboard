@@ -28,7 +28,7 @@ def show():
                 )
 
             )
-        fig.update_layout(height=700,
+        fig.update_layout(
             title="Inflation Trends by Country",
             legend_title="Countries",
             hovermode="x unified",
@@ -52,10 +52,10 @@ def show():
             st.header('Inflation Rates by Country')
             country = st.sidebar.selectbox('Select a country',options=sorted(list(inflation_data['RegionalMember'].unique()),))
             report_data = inflation_data[inflation_data['RegionalMember']==country]
-            st.plotly_chart(px.bar(report_data,x='Year',y='Inflation',labels={'Inflation':'Inflation %'},color='Year',height=750))
+            st.plotly_chart(px.bar(report_data,x='Year',y='Inflation',labels={'Inflation':'Inflation %'},color='Year'))
         elif report_mode == 'By Year':
             st.header('Yearly Inflation Rates')
             year = st.sidebar.number_input(label='Select a year', min_value=2018,max_value=2024,value=2020)
             countries = st.sidebar.multiselect('Select a country', options=sorted(list(inflation_data['RegionalMember'].unique()),),default=['Pakistan','Afghanistan','India'] )
             filtered_data = inflation_data[(inflation_data['Year']==year)&(inflation_data['RegionalMember'].isin(countries))]
-            st.plotly_chart(px.bar(filtered_data, x='RegionalMember',y='Inflation',labels={'Inflation': 'Inflation %'},color='Inflation',height=750))
+            st.plotly_chart(px.bar(filtered_data, x='RegionalMember',y='Inflation',labels={'Inflation': 'Inflation %'},color='Inflation'))

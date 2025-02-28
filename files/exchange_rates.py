@@ -8,7 +8,6 @@ exchange_file = exchange_file.drop(columns='Unnamed: 0')
 
 def show():
     st.header('Exchange Rates')
-
     start, end = st.slider('Select a year range', min_value=2000, max_value=2019, value=(2007, 2012))
     currencies = st.sidebar.multiselect('Select currencies for comparison', options=exchange_file.columns[1:-2],
                                 default=['U.S. Dollar'])
@@ -24,8 +23,8 @@ def show():
             )
 
         )
-    fig.update_layout(height=720,
-        title="Exchange Rate Trends",
+    fig.update_layout(
+
         legend_title="Currency",
         hovermode="x unified",
         xaxis=dict(

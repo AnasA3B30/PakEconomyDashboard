@@ -10,13 +10,15 @@ def show():
     data_exports = data_file[['Year', 'Exports (% of GDP)', 'Exports']]
     data_imports = data_file[['Year', 'Imports (% of GDP)', 'Imports']]
     st.sidebar.header('Imports and Exports')
-    start, end = st.slider('Select a year range',min_value=2000,max_value=2023,value=(2007,2015))
-    data_imports = data_imports[(data_imports['Year']>=start)&(data_imports['Year']<=end)]
-    data_exports = data_exports[(data_exports['Year'] >= start) & (data_exports['Year'] <= end)]
-    indicator = st.sidebar.selectbox('Select an indicator: ', options=['Exports','Imports','Both'])
 
+
+    indicator = st.sidebar.selectbox('Select an indicator: ', options=['Exports','Imports','Both'])
+    start, end = st.slider('Select a year range', min_value=2000, max_value=2023, value=(2007, 2015))
+    data_imports = data_imports[(data_imports['Year'] >= start) & (data_imports['Year'] <= end)]
+    data_exports = data_exports[(data_exports['Year'] >= start) & (data_exports['Year'] <= end)]
 
     if indicator == 'Exports':
+        st.title('Exports')
         metric = st.sidebar.selectbox('Select an metric: ', options=['Value', '% of GDP', 'Both'])
 
         x = data_exports['Year']
@@ -24,7 +26,7 @@ def show():
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons', 'Both'])
             y = data_exports['Exports']
 
-            plot_line = px.line(x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'}, height=700)
+            plot_line = px.line(x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'}, )
             plot_line.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -32,7 +34,7 @@ def show():
                 )
             )
 
-            plot_bar = px.bar(data_exports,x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'}, height=700,color_discrete_sequence=px.colors.sequential.Blues,color='Exports')
+            plot_bar = px.bar(data_exports,x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'},color_discrete_sequence=px.colors.sequential.Blues,color='Exports')
             plot_bar.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -53,7 +55,7 @@ def show():
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons', 'Both'])
             y = data_exports['Exports (% of GDP)']
 
-            plot_line = px.line(x=x, y=y, labels={'y': 'Export as % of GDP', 'x': 'Year'}, height=700)
+            plot_line = px.line(x=x, y=y, labels={'y': 'Export as % of GDP', 'x': 'Year'},)
             plot_line.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -61,7 +63,7 @@ def show():
                 )
             )
 
-            plot_bar = px.bar(data_exports,x=x, y=y, labels={'y': 'Export as % of GDP', 'x': 'Year'}, height=700,color_discrete_sequence=px.colors.sequential.Blues,color='Exports (% of GDP)')
+            plot_bar = px.bar(data_exports,x=x, y=y, labels={'y': 'Export as % of GDP', 'x': 'Year'}, color_discrete_sequence=px.colors.sequential.Blues,color='Exports (% of GDP)')
             plot_bar.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -81,10 +83,10 @@ def show():
             y_val = data_exports['Exports']
             y_percent = data_exports['Exports (% of GDP)']
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons',])
-            y_val_line = px.line(x=x,y=y_val,height=700,labels={'x':'Year', 'y':'Exports in USD'},color_discrete_sequence=px.colors.sequential.Blues_r)
-            y_val_bar = px.bar(data_exports,x=x, y=y_val, height=700,labels={'x':'Year', 'y':'Exports in USD'},color_continuous_scale=px.colors.sequential.Blues,color='Exports')
-            y_percent_line = px.line(x=x, y=y_percent, height=700,labels={'x':'Year', 'y':'Exports as % of GDP'})
-            y_percent_bar = px.bar(data_exports,x=x, y=y_percent, height=700,labels={'x':'Year', 'y':'Exports as % of GDP'},color_discrete_sequence=px.colors.sequential.Blues,color='Exports (% of GDP)')
+            y_val_line = px.line(x=x,y=y_val,labels={'x':'Year', 'y':'Exports in USD'},color_discrete_sequence=px.colors.sequential.Blues_r)
+            y_val_bar = px.bar(data_exports,x=x, y=y_val, labels={'x':'Year', 'y':'Exports in USD'},color_continuous_scale=px.colors.sequential.Blues,color='Exports')
+            y_percent_line = px.line(x=x, y=y_percent, labels={'x':'Year', 'y':'Exports as % of GDP'})
+            y_percent_bar = px.bar(data_exports,x=x, y=y_percent, labels={'x':'Year', 'y':'Exports as % of GDP'},color_discrete_sequence=px.colors.sequential.Blues,color='Exports (% of GDP)')
             col1, col2, = st.columns(2)
 
             if view == 'Trends':
@@ -95,6 +97,7 @@ def show():
                 col2.plotly_chart(y_percent_bar)
 
     elif indicator == 'Imports':
+        st.title('Imports')
         metric = st.sidebar.selectbox('Select an metric: ', options=['Value', '% of GDP', 'Both'])
 
         x = data_imports['Year']
@@ -102,7 +105,7 @@ def show():
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons', 'Both'])
             y = data_imports['Imports']
 
-            plot_line = px.line(x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'}, height=700)
+            plot_line = px.line(x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'}, )
             plot_line.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -110,7 +113,7 @@ def show():
                 )
             )
 
-            plot_bar = px.bar(x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'}, height=700)
+            plot_bar = px.bar(x=x, y=y, labels={'y': 'Value USD', 'x': 'Year'}, )
             plot_bar.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -131,7 +134,7 @@ def show():
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons', 'Both'])
             y = data_imports['Imports (% of GDP)']
 
-            plot_line = px.line(x=x, y=y, labels={'y': 'Import as % of GDP', 'x': 'Year'}, height=700)
+            plot_line = px.line(x=x, y=y, labels={'y': 'Import as % of GDP', 'x': 'Year'}, )
             plot_line.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -139,7 +142,7 @@ def show():
                 )
             )
 
-            plot_bar = px.bar(x=x, y=y, labels={'y': 'Import as % of GDP', 'x': 'Year'}, height=700)
+            plot_bar = px.bar(x=x, y=y, labels={'y': 'Import as % of GDP', 'x': 'Year'}, )
             plot_bar.update_layout(
                 xaxis=dict(
                     tickmode='array',
@@ -160,10 +163,10 @@ def show():
             y_val = data_imports['Imports']
             y_percent = data_imports['Imports (% of GDP)']
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons',])
-            y_val_line = px.line(x=x,y=y_val,height=700,labels={'x':'Year', 'y':'Imports in USD'})
-            y_val_bar = px.bar(x=x, y=y_val, height=700,labels={'x':'Year', 'y':'Imports in USD'})
-            y_percent_line = px.line(x=x, y=y_percent, height=700,labels={'x':'Year', 'y':'Imports as % of GDP'})
-            y_percent_bar = px.bar(x=x, y=y_percent, height=700,labels={'x':'Year', 'y':'Imports as % of GDP'})
+            y_val_line = px.line(x=x,y=y_val,labels={'x':'Year', 'y':'Imports in USD'})
+            y_val_bar = px.bar(x=x, y=y_val, labels={'x':'Year', 'y':'Imports in USD'})
+            y_percent_line = px.line(x=x, y=y_percent, labels={'x':'Year', 'y':'Imports as % of GDP'})
+            y_percent_bar = px.bar(x=x, y=y_percent, labels={'x':'Year', 'y':'Imports as % of GDP'})
             col1, col2, = st.columns(2)
 
             if view == 'Trends':
@@ -174,15 +177,16 @@ def show():
                 col2.plotly_chart(y_percent_bar)
 
     elif indicator == 'Both':
+        st.title('Imports vs Exports')
         x = data_exports['Year']
         metric = st.sidebar.selectbox('Select an metric: ', options=['Value', '% of GDP'])
         if metric == 'Value':
             y1 = data_imports['Imports']
             y2 = data_exports['Exports']
-            line_1 = px.line(x=x, y=y1, height=700,labels={'x':'Year','y':'Imports'})
-            line_2 = px.line(x=x, y=y2, height=700,labels={'x':'Year','y':'Exports'})
-            bar_1 = px.bar(y1,x=x,y=y1,height=700,labels={'x':'Year','y':'Imports',},color='Imports')
-            bar_2 = px.bar(y2,x=x,y=y2,height=700,labels={'x':'Year','y':'Exports'},color='Exports')
+            line_1 = px.line(x=x, y=y1, labels={'x':'Year','y':'Imports'})
+            line_2 = px.line(x=x, y=y2, labels={'x':'Year','y':'Exports'})
+            bar_1 = px.bar(y1,x=x,y=y1,labels={'x':'Year','y':'Imports',},color='Imports')
+            bar_2 = px.bar(y2,x=x,y=y2,labels={'x':'Year','y':'Exports'},color='Exports')
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons'])
             if view == 'Trends':
                 col1, col2, = st.columns(2)
@@ -196,10 +200,10 @@ def show():
             view = st.sidebar.selectbox('Select a view: ', options=['Trends', 'Comparisons'])
             y1 = data_imports['Imports (% of GDP)']
             y2 = data_exports['Exports (% of GDP)']
-            line_1 = px.line(x=x, y=y1, height=700, labels={'y': "Import as % of GDP"})
-            line_2 = px.line(x=x, y=y2, height=700, labels={'y': "Export as % of GDP"})
-            bar_1 = px.bar(y1,x=x, y=y1, height=700, labels={'y': "Import in USD"},color='Imports (% of GDP)')
-            bar_2 = px.bar(y2,x=x, y=y2, height=700, labels={'y': "Export in USD"},color='Exports (% of GDP)')
+            line_1 = px.line(x=x, y=y1, labels={'y': "Import as % of GDP"})
+            line_2 = px.line(x=x, y=y2, labels={'y': "Export as % of GDP"})
+            bar_1 = px.bar(y1,x=x, y=y1, labels={'y': "Import in USD"},color='Imports (% of GDP)')
+            bar_2 = px.bar(y2,x=x, y=y2, labels={'y': "Export in USD"},color='Exports (% of GDP)')
             if view == 'Trends':
                 col1, col2, = st.columns(2)
                 col1.plotly_chart(line_1)

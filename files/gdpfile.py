@@ -39,7 +39,7 @@ def show():
         # creating charts
         # line plot
         line_plot = px.line(relevant_data, x='Year', y='GDP')
-        line_plot.update_layout(height=700,
+        line_plot.update_layout(
             xaxis=dict(
                 tickmode='array',
                 tickvals=list(range(start, end + 1))
@@ -48,7 +48,7 @@ def show():
         # bar plot
         bar_plot = px.bar(relevant_data, x='Year', y='GDP',color='GDP')
         bar_plot.update_traces(showlegend=False, )
-        bar_plot.update_layout(height=700,
+        bar_plot.update_layout(
             showlegend=False,
             xaxis=dict(
                 tickmode='array',
@@ -83,7 +83,7 @@ def show():
             year = st.selectbox('Select a year to analyze', options=list(range(2000, 2019)))
             sector_data = gdp_sector_wise[gdp_sector_wise['Year']==year]
             plot_data=sector_data.groupby('Sector', as_index=False)['Amount'].sum()
-            bar_c=px.bar(plot_data,title='Value in PKR',height=700,x='Sector',y='Amount',color='Sector',color_discrete_sequence=['#E0F7FA', '#81D4FA', '#0277BD']
+            bar_c=px.bar(plot_data,title='Value in PKR',x='Sector',y='Amount',color='Sector',color_discrete_sequence=['#E0F7FA', '#81D4FA', '#0277BD']
 )
             st.plotly_chart(bar_c)
         elif selection=='Product Wise Distribution':
@@ -97,7 +97,7 @@ def show():
                 x='Product',
                 y='Amount',
                 title='Value in PKR',
-                height=700,
+
                 color='Product',  # Different colors for products
                 color_discrete_sequence=px.colors.sequential.Blues  # Distinct colors
             )
@@ -106,7 +106,7 @@ def show():
             products = st.sidebar.multiselect('Select Sector',options=sorted(gdp_sector_wise['Sector'].unique()),default='Agriculture')
             start,end = st.slider('Select a year range',min_value=2000,max_value=2018,value=(2007,2012))
             relevant_data = gdp_sector_wise[(gdp_sector_wise['Year']>=start)&(gdp_sector_wise['Year']<=end)]
-            fig = px.line(height=700)
+            fig = px.line()
             for product in products:
                 product_data = relevant_data[relevant_data['Sector']==product]
                 product_data = dict(product_data.groupby('Year')['Amount'].sum().reset_index())
@@ -146,7 +146,7 @@ def show():
 
             relevant_data = gdp_sector_wise[(gdp_sector_wise['Year'] >= start) & (gdp_sector_wise['Year'] <= end)]
 
-            fig = px.line(height=700)
+            fig = px.line()
 
             for product in products:
                 product_data = relevant_data[relevant_data['Product'] == product]
@@ -202,13 +202,13 @@ def show():
 
         elif selection=='Yearly Pie Chart':
             year = st.number_input('Select a year (2000-2019)', min_value=2000,max_value=2019,value=2007)
-            st.subheader(f'Now displaying pie chart for year {year}.')
+            st.subheader(f'Now displaying pie charts for year {year}.')
             df = gdp_sector_wise[gdp_sector_wise['Year']==year]
-            col1, col2 = st.columns(2)
-            col1.subheader('By Sectors')
-            col1.plotly_chart(px.pie(df,values='Amount',names='Sector',hole=0.5,color_discrete_sequence=['#E0F7FA', '#81D4FA', '#0277BD'],width=700,height=700))
-            col2.subheader('By Products')
-            col2.plotly_chart(px.pie(df,values='Amount',names='Product',color_discrete_sequence=px.colors.sequential.Teal,width=700,height=700))
+            st.subheader('By Sectors')
+            st.plotly_chart(px.pie(df,values='Amount',names='Sector',hole=0.5,color_discrete_sequence=['#E0F7FA', '#81D4FA', '#0277BD'],width=500,height=500))
+            st.divider()
+            st.subheader('By Products')
+            st.plotly_chart(px.pie(df,values='Amount',names='Product',color_discrete_sequence=px.colors.sequential.Teal,width=500,height=500))
 
 
 
